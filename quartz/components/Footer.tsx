@@ -17,6 +17,11 @@ export default ((opts?: Options) => {
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
         </p>
+        <p>
+          Spotting mistakes, pages rendering weirdly or just general suggestions?{" "}
+          Shoot me a message at{" "}
+          <a href="mailto:jerome.hofstetter@gmail.com">jerome.hofstetter@gmail.com</a>
+      </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>

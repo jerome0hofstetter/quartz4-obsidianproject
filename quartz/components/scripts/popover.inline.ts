@@ -96,6 +96,20 @@ async function mouseEnterHandler(
         const targetID = `popover-internal-${el.id}`
         el.id = targetID
       })
+      //also adjust locations where ids are referenced
+      html.querySelectorAll('use').forEach(use => {
+        const href1 = use.getAttribute('xlink:href');
+        if (href1 && href1.startsWith('#')) {
+          const originalId = href1.slice(1);
+          use.setAttribute('xlink:href', `#popover-internal-${originalId}`);
+          console.log(`new attrib : ${use.getAttribute('xlink:href')}`)
+        }
+        const href2 = use.getAttribute('href');
+        if (href2 && href2.startsWith('#')) {
+          const originalId = href2.slice(1);
+          use.setAttribute('href', `#popover-internal-${originalId}`);
+        }
+      });
       const elts = [...html.getElementsByClassName("popover-hint")]
       if (elts.length === 0) return
 

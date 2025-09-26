@@ -1,0 +1,19 @@
+{
+  "name": "obsidian-typst",
+  "type": "module",
+  "collaborators": [
+    "fenjalien","jerome0hofstetter"
+  ],
+  "description": "Renders `typst` code blocks to images with Typst. (TODO fix this file, ive just generated this taking the obsidian typst plugin as base)",
+  "version": "0.10.0",
+  "files": [
+    "obsidian_typst_bg.wasm",
+    "obsidian_typst.js",
+    "obsidian_typst.d.ts"
+  ],
+  "main": "obsidian_typst.js",
+  "types": "obsidian_typst.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
