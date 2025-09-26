@@ -86,7 +86,7 @@ export class TypstForObsidianCompiler {
     var_widths: number[],
     theme: "dark" | "light" = "dark",
     wasmpath :string =wasmPath ,
-    obsidian_typst_plugin_folder: string = "S:/Coding_Gits/quartz/content/.obsidian/plugins/typst"
+    obsidian_typst_plugin_folder: string = path.resolve(  "./content/.obsidian/plugins/typst")
   ) {
     this.wasmBytes = fs.readFileSync(wasmpath);
     this.packagePath = path.join(obsidian_typst_plugin_folder,"packages");
