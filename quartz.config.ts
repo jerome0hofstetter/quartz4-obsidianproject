@@ -18,7 +18,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian","node_modules/**","Scripts","_Necessary-Folder","typst preamble","testing"],
+    ignorePatterns: ["private", "templates", ".obsidian","node_modules/**","Scripts","_Necessary-Folder/latex suite","_Necessary-Folder/Templates","typst preamble","testing"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
@@ -57,6 +57,7 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
+      Plugin.HardLineBreaks(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
       }),
